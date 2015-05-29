@@ -13,8 +13,8 @@ Files of note:
 3. conversion/election-json-csv.py - this file converts the JSON output to CSV
 
 
-The output (if you don't want to run the code yourself) is in the folder named 'data'
-
+The JSON output (if you don't want to run the code yourself) is in the folder named 'data'
+The output has been converted to CSV in the folder named 'output' 
 
 Scrapy spiders
 ==============
@@ -62,3 +62,7 @@ It would be possible to have scrapy output CSV but it's just as easy to use a co
 ```
 python election-json-csv.py --json party.json --csv party.csv
 ```
+
+Adding constituency name to constituency code
+=============================================
+When you scrape the data, the constituency code is returned but not the actual constituency name. These names can be found in the constituencies.csv input file used to populate the URL list for scraping. They are matched with the constituency code so it is easy to link the names with the output files. This is a little bit lazy of me, but is no problem if you're analysing the data in CSV format. 
